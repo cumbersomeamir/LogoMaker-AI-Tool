@@ -4,7 +4,7 @@ import os
 def create_logo(company_name):
     
 
-    OPENAI_API_KEY = "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"
+    OPENAI_API_KEY = ""
 
     client = OpenAI()
 
