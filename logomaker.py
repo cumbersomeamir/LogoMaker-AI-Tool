@@ -27,8 +27,11 @@ def create_logo(company_name):
 
 def extract_initials(company_name):
     words = company_name.split()  # Split the company name into words
-    initials = ''.join(word[0] for word in words)  # Extract the first letter of each word
-      return initials.upper()  # Return the initials in uppercase
+    if len(words) == 1:
+        initials = company_name[:2]  # Take first two letters if only one word
+    else:
+        initials = ''.join(word[0] for word in words)  # Take first letter of each word for two or more words
+    return initials.upper()  # Return the initials in uppercase
 
 
 #Creating the logo
